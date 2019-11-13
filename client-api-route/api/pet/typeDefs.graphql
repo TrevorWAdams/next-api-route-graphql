@@ -1,0 +1,17 @@
+type Pet {
+  id: ID!
+  name: String!
+}
+
+input PetInput {
+  id: ID
+  name: String!
+}
+
+type Mutation {
+  addPet(input: PetInput): Pet
+}
+
+type Query {
+  pets: [Pet]
+}
