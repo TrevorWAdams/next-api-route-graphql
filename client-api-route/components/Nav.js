@@ -10,13 +10,13 @@ const Nav = () => (
         </Link>
       </li>
       <li>
-        <Link href='/pet'>
-          <a>Pet</a>
+        <Link href='/pets'>
+          <a>Pets</a>
         </Link>
       </li>
       <li>
-        <Link href='/user'>
-          <a>User</a>
+        <Link href='/users'>
+          <a>Users</a>
         </Link>
       </li>
       

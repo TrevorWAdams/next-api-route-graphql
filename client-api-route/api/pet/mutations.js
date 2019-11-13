@@ -1,7 +1,7 @@
 export const petMutations = {
   Mutation: {
-    async addPet(_, { pet }) {
-      console.log('add pet');
+    async addPet(parent, { data }, { models }, info) {
+      return models.Pet.create(data);
     }
   }
 };

@@ -4,7 +4,7 @@ import { petQueries } from "../../api/pet/queries";
 import { petMutations } from "../../api/pet/mutations";
 import { userQueries } from "../../api/user/queries";
 import { userMutations } from "../../api/user/mutations";
-
+import { models, db } from "../../db";
 import Pet from "../../api/pet/typeDefs.graphql";
 import User from "../../api/user/typeDefs.graphql";
 
@@ -15,12 +15,15 @@ const resolvers = mergeResolvers([
   userMutations
 ]);
 
-const typeDefs = mergeTypeDefs([
-  Pet,
-  User
-]);
+const typeDefs = mergeTypeDefs([Pet, User]);
 
-const apolloServer = new ApolloServer({ typeDefs, resolvers });
+const apolloServer = new ApolloServer({
+  typeDefs,
+  resolvers,
+  context() {
+    return { models, db };
+  }
+});
 
 export const config = {
   api: {

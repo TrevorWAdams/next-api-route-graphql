@@ -1,17 +1,33 @@
 type User {
   id: ID!
-  name: String!
+  createdAt: String!
+  modifiedAt: String
+  firstName: String!
+  lastName: String!
+  fullName: String!
+  avatar: String
+  pets: [Pet]
 }
 
-input UserInput {
+input UserCreateInput {
+  firstName: String!
+  lastName: String!
+  avatar: String
+}
+
+input UserWhereInput {
+  firstName: String
+  lastName: String
+}
+
+input UserWhereUniqueInput {
   id: ID
-  name: String!
 }
-
 type Mutation {
-  addUser(input: UserInput): User
+  addUser(input: UserCreateInput): User!
 }
 
 type Query {
-  users: [User]
+  users(where: UserWhereInput): [User]!
+  user(where: UserWhereUniqueInput!): User
 }

@@ -1,17 +1,40 @@
-type Pet {
-  id: ID!
-  name: String!
-}
 
-input PetInput {
-  id: ID
-  name: String!
-}
+  enum PetType {
+    DOG
+    CAT
+  }
+  
+  type Pet {
+    id: ID!
+    createdAt: String!
+    modifiedAt: String
+    name: String!
+    type: PetType!
+    img: String
+    person: User
+  }
+
+  input PetCreateInput {
+    name: String!
+    type: PetType!
+  }
+
+  input PetWhereInput {
+    name: String
+    type: PetType
+    person: UserWhereUniqueInput
+  }
+
+  input PetWhereUniqueInput {
+    id: ID
+  }
+
 
 type Mutation {
-  addPet(input: PetInput): Pet
+  addPet(input: PetCreateInput): Pet!
 }
 
 type Query {
-  pets: [Pet]
+  pets(where: PetWhereInput): [Pet]!
+  pet(where: PetWhereUniqueInput!): Pet
 }
