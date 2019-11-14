@@ -1,25 +1,25 @@
 // Import React
-import React from "react";
+import React from 'react';
 
 // Import Spectacle Core tags
-import { Deck, Heading, List, ListItem, Notes, Slide, Text } from "spectacle";
+import { Deck, Heading, List, ListItem, Notes, Slide, Text } from 'spectacle';
 
 // Import theme
-import createTheme from "spectacle/lib/themes/default";
+import createTheme from 'spectacle/lib/themes/default';
 
 // Require CSS
-require("normalize.css");
+require('normalize.css');
 
 const theme = createTheme(
   {
-    primary: "white",
-    secondary: "#1F2022",
-    tertiary: "#03A9FC",
-    quaternary: "#CECECE"
+    primary: 'white',
+    secondary: '#1F2022',
+    tertiary: '#03A9FC',
+    quaternary: '#CECECE'
   },
   {
-    primary: "Montserrat",
-    secondary: "Helvetica"
+    primary: 'Montserrat',
+    secondary: 'Helvetica'
   }
 );
 
@@ -27,11 +27,11 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck
-        transition={["zoom", "slide"]}
+        transition={['zoom', 'slide']}
         transitionDuration={500}
         theme={theme}
       >
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
           <Heading size={1} textColor="secondary" caps>
             GraphQL
           </Heading>
@@ -39,7 +39,7 @@ export default class Presentation extends React.Component {
           <Notes>Explain why I'm interested in GraphQL.</Notes>
         </Slide>
 
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
           <Heading size={1} textColor="secondary" caps>
             Welcome
           </Heading>
@@ -49,7 +49,7 @@ export default class Presentation extends React.Component {
             <ListItem>I work for Allata.</ListItem>
           </List>
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
           <Heading size={1} textColor="secondary" caps>
             The Problem
           </Heading>
@@ -61,7 +61,7 @@ export default class Presentation extends React.Component {
           <Notes>Set the context - general observations</Notes>
           <Notes>I've been faced with this problem on several occasions</Notes>
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
           <Heading size={3} textColor="secondary" caps>
             Business logic sprawl
           </Heading>
@@ -74,7 +74,7 @@ export default class Presentation extends React.Component {
           <Notes>I call this hidden business logic.</Notes>
           <Notes>So what can we do?</Notes>
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
           <Heading size={3} textColor="secondary" caps>
             Put business logic in one place
           </Heading>
@@ -87,7 +87,7 @@ export default class Presentation extends React.Component {
           </List>
           <Notes>Swagger is cool, but it's another thing to do.</Notes>
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
           <Heading size={1} textColor="secondary" caps>
             GraphQL
           </Heading>
@@ -95,7 +95,7 @@ export default class Presentation extends React.Component {
             One API to rule them all
           </Heading>
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
           <Heading size={3} textColor="secondary" caps>
             What is GraphQL?
           </Heading>
@@ -105,7 +105,7 @@ export default class Presentation extends React.Component {
           </List>
           <Notes>https://graphql.github.io/graphql-spec/June2018/</Notes>
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
           <Heading size={4} textColor="secondary" caps>
             Why use the GraphQL Specification?
           </Heading>
@@ -116,7 +116,7 @@ export default class Presentation extends React.Component {
             <ListItem>Defines a channel for push notifications.</ListItem>
           </List>
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
           <Heading size={3} textColor="secondary" caps>
             How does it work?
           </Heading>
@@ -125,7 +125,7 @@ export default class Presentation extends React.Component {
           </List>
           <Notes>But here is what I think I know.</Notes>
         </Slide>
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
           <Heading size={4} textColor="secondary" caps>
             GraphQL - Big picture
           </Heading>
@@ -136,7 +136,7 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
 
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>
             Special types
           </Heading>
@@ -148,7 +148,7 @@ export default class Presentation extends React.Component {
           <Notes>Briefly explain each.</Notes>
         </Slide>
 
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
           <Heading size={4} textColor="secondary" caps>
             Async resolver functions
           </Heading>
@@ -159,7 +159,7 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
 
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
           <Heading size={1} textColor="secondary" caps>
             Challenges
           </Heading>
@@ -171,7 +171,7 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
 
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>
             Pets, Users, and a Login Button
           </Heading>
@@ -186,7 +186,7 @@ export default class Presentation extends React.Component {
           <Notes>I believe api routes were added in Next.js 9?</Notes>
         </Slide>
 
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
           <Heading size={1} textColor="secondary" caps>
             Overview
           </Heading>
@@ -198,7 +198,7 @@ export default class Presentation extends React.Component {
           <Notes>Fire it up</Notes>
         </Slide>
 
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
           <Heading size={4} textColor="secondary" caps>
             GraphQL Playground
           </Heading>
@@ -210,7 +210,7 @@ export default class Presentation extends React.Component {
           <Notes>Demo queries and Log In mutation</Notes>
         </Slide>
 
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
           <Heading size={1} textColor="secondary" caps>
             Auth Stuff
           </Heading>
@@ -224,7 +224,7 @@ export default class Presentation extends React.Component {
           <Notes>This demo is not secure.</Notes>
         </Slide>
 
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
           <Heading size={1} textColor="secondary" caps>
             Client
           </Heading>
@@ -236,7 +236,7 @@ export default class Presentation extends React.Component {
           <Notes>Use GraphQL playground to build, then copy to client.</Notes>
         </Slide>
 
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
           <Heading size={1} textColor="secondary" caps>
             Conclusion
           </Heading>
@@ -248,7 +248,7 @@ export default class Presentation extends React.Component {
           <Notes>Any questions.</Notes>
         </Slide>
 
-        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+        <Slide transition={['fade']} bgColor="primary" textColor="tertiary">
           <Heading size={1} textColor="secondary" caps>
             Thanks
           </Heading>
