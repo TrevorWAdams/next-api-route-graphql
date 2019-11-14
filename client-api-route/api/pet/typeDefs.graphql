@@ -17,6 +17,7 @@
   input PetCreateInput {
     name: String!
     type: PetType!
+    person: UserWhereUniqueInput
   }
 
   input PetWhereInput {

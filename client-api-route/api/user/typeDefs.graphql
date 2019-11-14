@@ -1,5 +1,27 @@
+enum Theme {
+  DARK
+  LIGHT
+}
+
+type UserSettings {
+  id: ID!
+  user: User!
+  theme: Theme!
+  emailNotifications: Boolean!
+  pushNotifications: Boolean!
+}
+
+input UpdateUserSettingsInput {
+  theme: Theme
+  emailNotifications: Boolean
+  pushNotifications: Boolean
+}
+
 type User {
   id: ID!
+  email: String!
+  userSettings: UserSettings!
+  verified: Boolean!
   createdAt: String!
   modifiedAt: String
   firstName: String!
@@ -7,6 +29,12 @@ type User {
   fullName: String!
   avatar: String
   pets: [Pet]
+}
+
+input UpdateUserInput {
+  email: String
+  avatar: String
+  verified: Boolean
 }
 
 input UserCreateInput {
@@ -20,14 +48,31 @@ input UserWhereInput {
   lastName: String
 }
 
+input UserSettingsWhereInput {
+  theme: Theme
+  emailNotifications: Boolean
+  pushNotifications: Boolean
+}
+
 input UserWhereUniqueInput {
   id: ID
 }
+
+input LoginInput {
+  email: String!
+  password: String!
+}
+
 type Mutation {
   addUser(input: UserCreateInput): User!
+  updateUserSettings(input: UpdateUserSettingsInput!, where: UserWhereUniqueInput!): UserSettings!
+  updateMe(input: UpdateUserInput!): User
+  login(input: LoginInput!): User
 }
 
 type Query {
+  me: User!
   users(where: UserWhereInput): [User]!
   user(where: UserWhereUniqueInput!): User
+  userSettings(where: UserSettingsWhereInput): [UserSettings]!
 }

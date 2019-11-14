@@ -13,6 +13,17 @@ query petsQuery {
     name
     type
     img
+    person {
+      id
+      firstName
+      lastName
+      fullName
+      userSettings {
+        theme
+        emailNotifications
+        pushNotifications
+      }
+    }
   }
 }
 `;

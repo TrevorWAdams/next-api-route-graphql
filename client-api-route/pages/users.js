@@ -8,12 +8,21 @@ const USERS_QUERY = gql`
 query usersQuery {
   users {
     id
-    createdAt
-    modifiedAt
+    email
+    verified
     firstName
     lastName
     fullName
     avatar
+    userSettings {
+      theme
+      emailNotifications
+      pushNotifications
+    }
+    pets {
+      name
+      type
+    }
   }
 }
 `;
