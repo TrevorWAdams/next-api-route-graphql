@@ -18,11 +18,6 @@ query petsQuery {
       firstName
       lastName
       fullName
-      userSettings {
-        theme
-        emailNotifications
-        pushNotifications
-      }
     }
   }
 }

@@ -14,10 +14,9 @@ export const userQueries = {
       return models.User.findOne(where);
     },
 
-    userSettings(parent, { where }, { models }, info) {
+    userSettings: authenticated((parent, { where }, { models }, info) => {
       return models.Settings.findMany(where);
-    },
-
+    })
   },
   User: {
     fullName(user) {
@@ -32,13 +31,13 @@ export const userQueries = {
     pets(user, args, ctx) {
       return ctx.models.Pet.findMany({ personId: user.id });
     },
-    userSettings(user, args, ctx) {
+    userSettings: authenticated((user, args, ctx) => {
       return ctx.models.Settings.findOne({ id: user.settingsId });
-    }
+    })
   },
   UserSettings: {
     user(userSettings, args, ctx) {
-      return ctx.models.User.findOne({settingsId: userSettings.id});
-    },
+      return ctx.models.User.findOne({ settingsId: userSettings.id });
+    }
   }
 };

@@ -1,3 +1,4 @@
+const {AuthenticationError} = require('apollo-server-micro')
 import { authenticated } from "../../lib/auth";
 
 export const userMutations = {

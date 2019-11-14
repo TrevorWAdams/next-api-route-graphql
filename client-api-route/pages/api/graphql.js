@@ -25,7 +25,6 @@ const apolloServer = new ApolloServer({
 
     const token = req.headers.authorization
     const user = getUserFromToken(token)
-
     return { models, db, user, createToken};
   }
 });

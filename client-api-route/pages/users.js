@@ -14,11 +14,6 @@ query usersQuery {
     lastName
     fullName
     avatar
-    userSettings {
-      theme
-      emailNotifications
-      pushNotifications
-    }
     pets {
       name
       type

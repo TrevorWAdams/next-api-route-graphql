@@ -17,6 +17,11 @@ input UpdateUserSettingsInput {
   pushNotifications: Boolean
 }
 
+type AuthUser {
+  token: String!
+  user: User!
+}
+
 type User {
   id: ID!
   email: String!
@@ -38,6 +43,7 @@ input UpdateUserInput {
 }
 
 input UserCreateInput {
+  email: String!
   firstName: String!
   lastName: String!
   avatar: String
@@ -65,9 +71,12 @@ input LoginInput {
 
 type Mutation {
   addUser(input: UserCreateInput): User!
-  updateUserSettings(input: UpdateUserSettingsInput!, where: UserWhereUniqueInput!): UserSettings!
+  updateUserSettings(
+    input: UpdateUserSettingsInput!
+    where: UserWhereUniqueInput!
+  ): UserSettings!
   updateMe(input: UpdateUserInput!): User
-  login(input: LoginInput!): User
+  login(input: LoginInput!): AuthUser!
 }
 
 type Query {

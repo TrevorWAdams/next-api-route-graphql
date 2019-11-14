@@ -30,6 +30,7 @@ const initializeDb = db => {
         .push({
           id: "1",
           email: "bsmith@website.com",
+          password: "password",
           verified: false,
           createdAt: Date.now(),
           modifiedAt: null,
@@ -44,6 +45,7 @@ const initializeDb = db => {
         .push({
           id: "2",
           email: "jend@test.com",
+          password: "password",
           verified: true,
           createdAt: Date.now(),
           modifiedAt: null,
