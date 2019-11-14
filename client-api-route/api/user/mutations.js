@@ -25,6 +25,8 @@ export const userMutations = {
 
       const token = createToken(user);
 
+      console.log("login", user, token);
+
       return { token, user };
     }
   }

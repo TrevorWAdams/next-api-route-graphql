@@ -1,5 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
+import LoginButton from "./LoginButton"
+
 
 const Nav = () => (
   <nav>
@@ -19,7 +21,9 @@ const Nav = () => (
           <a>Users</a>
         </Link>
       </li>
-      
+      <li>
+        <LoginButton email="bsmith@website.com" password="password" />
+      </li>
     </ul>
 
     <style jsx>{`
