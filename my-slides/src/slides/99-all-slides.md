@@ -1,3 +1,12 @@
+# Welcome
+
+My name is Trevor.
+I'm a dev.
+
+[GitHub](https://github.com/TrevorWAdams/next-api-route-graphql)
+
+---
+
 # Disclaimer
 
 I am very opinionated.
@@ -5,6 +14,7 @@ However, my opinions are not tightly held.
 
 This is just my opinion.
 
+---
 
 ## The Problem
 
@@ -20,6 +30,8 @@ However, that is not often the case.
 As systems mature this business logic "sprawl" makes the system brittle.
 So you might think, "I'm gonna put it all in one place!"
 
+---
+
 ## Challenges to solving the problem 
 
 Before you gather up all the business logic from the system, you might want to think about where you are going to put it?
@@ -30,6 +42,8 @@ Behind an API seems like an option.
 - Documenting the API is another thing to do.
 - Swagger is great but it's another thing to do.
 
+---
+
 ## What is GraphQL
 
 - [GraphQL](https://graphql.github.io/graphql-spec/June2018/) is a specification.
@@ -38,6 +52,8 @@ Behind an API seems like an option.
 - With GraphQL, there is 1 specification.
 - That makes it easy.
 
+---
+
 ## Why use GraphQL
 
 - The specification enforces consistency.
@@ -45,6 +61,8 @@ Behind an API seems like an option.
 - GraphQL defines a real time channel for push operations (subscriptions)
 - GraphQL allows you to create an abstraction layer for your API.
 - You can leverage existing APIs or any data source to resolve queries and mutations.
+
+---
 
 ## How does it work?
 
@@ -61,6 +79,8 @@ Behind an API seems like an option.
   - This abstraction layer allows the resolver function to be fulfilled however needed.
   - It also allows the implementations to vary over time without changing the GraphQL API.
 
+---
+
 ## Challenges to implementing a GraphQL API
 
 - You can't implement a specification.
@@ -68,6 +88,8 @@ Behind an API seems like an option.
 - These implementations allow for multiple caching mechanisms.
 - Designing a GraphQL schema is different that designing a database schema.
 - Changes to the API schema seem difficult.
+
+---
 
 ## Demo
 
