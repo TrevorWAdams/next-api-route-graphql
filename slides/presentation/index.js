@@ -256,6 +256,7 @@ export default class Presentation extends React.Component {
             GitHub:
           </Heading>
           <Text>trevorwadams/next-api-route-graphql</Text>
+          <Notes>Any questions?</Notes>
         </Slide>
       </Deck>
     );
