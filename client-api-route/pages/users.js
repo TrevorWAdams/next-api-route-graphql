@@ -5,27 +5,32 @@ import gql from "graphql-tag";
 import Layout from "../components/Layout";
 
 const USERS_QUERY = gql`
-query usersQuery {
-  users {
-    id
-    email
-    verified
-    firstName
-    lastName
-    fullName
-    avatar
-    pets {
-      name
-      type
+  query usersQuery {
+    users {
+      id
+      email
+      verified
+      firstName
+      lastName
+      fullName
+      avatar
+      userSettings {
+        theme
+        emailNotifications
+        pushNotifications
+      }
+      pets {
+        name
+        type
+      }
     }
   }
-}
 `;
 
 const Users = () => {
   const { data, loading, error } = useQuery(USERS_QUERY);
   if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error</div>;
+  if (error) return <div>Error {JSON.stringify(error, null, 2)}</div>;
 
   return (
     <Layout title="Users">
