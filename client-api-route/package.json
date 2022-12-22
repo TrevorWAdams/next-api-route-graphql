@@ -17,7 +17,7 @@
     "graphql-tag": "^2.10.1",
     "graphql-toolkit": "^0.6.7",
     "isomorphic-unfetch": "^3.0.0",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "lowdb": "^1.0.0",
     "nanoid": "^2.1.6",
     "next": "9.1.2",
